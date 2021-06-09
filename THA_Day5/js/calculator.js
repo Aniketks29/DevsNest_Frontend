@@ -4,8 +4,7 @@ window.onload = function Calculate() {
     function Add() {
         let first_num = Number(document.querySelector(".first-num").value);
         let second_num = Number(document.querySelector(".second-num").value);
-        // document.write(first_num + second_num);
-        // alert(first_num + second_num);
+        
         let ans = document.querySelector(".output-value");
         ans.innerHTML = first_num + second_num;
         console.log("Added");
@@ -14,8 +13,7 @@ window.onload = function Calculate() {
     function Subtract() {
         let first_num = Number(document.querySelector(".first-num").value);
         let second_num = Number(document.querySelector(".second-num").value);
-        // document.write(first_num + second_num);
-        // alert(first_num + second_num);
+        
         let ans = document.querySelector(".output-value");
         ans.innerHTML = first_num - second_num;
         console.log("Subtracted");
@@ -24,8 +22,7 @@ window.onload = function Calculate() {
     function Multiply() {
         let first_num = Number(document.querySelector(".first-num").value);
         let second_num = Number(document.querySelector(".second-num").value);
-        // document.write(first_num + second_num);
-        // alert(first_num + second_num);
+        
         let ans = document.querySelector(".output-value");
         ans.innerHTML = first_num * second_num;
         console.log("Multiplied");
@@ -34,8 +31,7 @@ window.onload = function Calculate() {
     function Division() {
         let first_num = Number(document.querySelector(".first-num").value);
         let second_num = Number(document.querySelector(".second-num").value);
-        // document.write(first_num + second_num);
-        // alert(first_num + second_num);
+        
         let ans = document.querySelector(".output-value");
         ans.innerHTML = first_num / second_num;
         console.log("Divided");
