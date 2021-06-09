@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -11,30 +11,40 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
+        
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="heading">
-            <h2>Calculator</h2>
+            <h1>Calculator</h1>
         </div>
         <div class="calculator-div">
-            <form class="calculator-form">
+            <form class="calculator-form" action="#" method="get" onSubmit="return">
                 <label for="first-number">First number:</label><br>
-                <input type="number" id="first-number" name="first-number"><br>
+                <input class="first-num" id="first-number" type="number"><br>
                 <label for="Second Number">Second Number:</label><br>
-                <input type="text" id="second-number" name="second-number"> <br>
+                <input class="second-num" id="second-number" type="number"> <br>
 
                 <!-- Submit buttons of Calculator -->
-                <input class="submit-add" type="submit" value="Add"> 
-                <input class="submit-subtract" type="submit" value="Subtract">
-                <input class="submit-multiply" type="submit" value="Multiply">
-                <input class="submit-division" type="submit" value="Divide">
+                <button class="submit-add custom-btn" type="submit" value="Add" >Add</button>
+                <button class="submit-subtract custom-btn" type="submit" value="Subtract">Subtract</button>
+                <button class="submit-multiply custom-btn" type="submit" value="Multiply">Multiply</button>
+                <button class="submit-division custom-btn" type="submit" value="Divide">Divide</button>
+
+                <div class="output">
+                    <label>Output</label>
+                    <div class="output-value">
+
+                    </div>
+                    <!-- <input class="output-value" type="number", name="output-value"> -->
+
+                </div>
             </form>
         </div>
 
+        <script src="js/calculator.js"></script>
         
-        <script src="js/calculator.js" async defer></script>
     </body>
 </html>
