@@ -11,26 +11,24 @@ body {
 }
 
 .seats {
-  width: 70vh;
-  height: 25%;
+  width: 40%;
+  height: 20%;
   size: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   padding: 20px;
-  font-size: 30px;
+  font-size: 1.8rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
-/* .booked-seats {
-  position: fixed;
-  left: 30px;
+.booked-seats,
+.available-seats {
+  text-align: center;
 }
-
-.avaliable-seats {
-  position: fixed;
-  right: 30px;
-} */
 
 .all-blocks {
   background-color: #659696;
