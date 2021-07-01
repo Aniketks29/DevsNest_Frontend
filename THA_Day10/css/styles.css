@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,500;1,500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url("/images/background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: color-dodge;
+  display: flex;
+  z-index: -100000;
+}
+.heading {
+  height: 100vh;
+  width: 45vw;
+  display: flex;
+  position: relative;
+}
+
+.game {
+  color: rgb(1, 0, 22);
+  font-family: "Tourney", cursive;
+  font-size: 95px;
+
+  padding: 11px 0px;
+  /* background: rgba(27, 31, 31, 0.562); */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  margin: auto;
+  border-radius: 50px;
+  z-index: 10;
+  /* background: aqua;
+  border: 3px solid black; */
+}
+.reset {
+  height: 7%;
+  font-family: "Tourney", cursive;
+  font-size: 25px;
+  background-color: aqua;
+  border-radius: 50px;
+  border: 5px solid black;
+  cursor: pointer;
+  margin: auto;
+  width: 70%;
+}
+
+.reset:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+.game-container {
+  height: 100vh;
+  width: 55vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  perspective: 1000px;
+  padding: 10px 70px;
+  cursor: pointer;
+}
+
+.memory-card {
+  width: calc(25% - 14px);
+  height: calc(25% - 14px);
+  margin: 7px;
+  position: relative;
+  border-radius: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  box-shadow: 10px 10px 10px rgba(8, 38, 39, 0.651);
+}
+
+.memory-card:active {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  background: #1a4fc09d;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
