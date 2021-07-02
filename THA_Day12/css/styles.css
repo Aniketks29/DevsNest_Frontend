@@ -79,7 +79,7 @@ body {
 }
 
 .submit:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: transform 0.2s;
   -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
   -moz-animation: neon2 1.5s ease-in-out infinite alternate;
@@ -143,6 +143,7 @@ body {
   width: 50%;
   box-shadow: 0 0 10px #d10;
   /* border-right: 1px solid #fff; */
+  text-shadow: 0 0 20px #c00, 0 0 40px #c00, 0 0 50px #000, 0 0 80px #000;
 }
 
 .completed-tasks {
@@ -150,6 +151,7 @@ body {
   width: 50%;
   /* border-left: 1px solid #fff; */
   box-shadow: 0 0 10px #d10;
+  text-shadow: 0 0 10px #fff, 0 0 30px #fff, 0 0 30px #0f4, 0 0 70px #0f4;
 }
 
 span {
@@ -160,6 +162,7 @@ span {
   border-bottom: 2px solid #08f;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
+  box-shadow: 0 0 5px #d10, 0 0 20px #d10, 0 0 40px #d10;
 }
 
 .pending-tasks-list,
@@ -169,6 +172,8 @@ span {
 }
 
 li {
+  color: #08f;
+  text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 50px #08f, 0 0 80px #08f;
   padding-top: 0.5em;
   height: 10%;
   /* height: auto; */
@@ -190,6 +195,8 @@ li:hover {
   border-bottom-right-radius: 10px;
   margin: 0% 2%;
   z-index: 1;
+  color: #c00;
+  text-shadow: 0 0 20px #c00, 0 0 40px #c00, 0 0 50px #000, 0 0 80px #000;
 }
 
 .doneBtn {
@@ -202,12 +209,9 @@ li:hover {
   color: #000;
   font-size: 2rem;
   color: #aaa;
-  z-index: -2;
+  z-index: 2;
   cursor: pointer;
   font-size: 2rem;
-  color: #000;
-  background-color: #0f4;
-  pointer-events: none;
 }
 
 .deleteBtn {
@@ -217,19 +221,23 @@ li:hover {
   background-color: rgb(206, 255, 239);
   border-radius: 10px;
   padding: 0.5% 0;
-  color: #000;
   font-size: 2rem;
   color: #aaa;
   cursor: pointer;
-  z-index: -1;
-  color: #000;
-  background-color: #c00;
+  z-index: 2;
 }
+
 .doneBtn:hover {
   font-size: 2rem;
   color: #000;
+  background-color: #0f4;
+  text-shadow: 0 0 20px #0f4, 0 0 40px #0f4, 0 0 50px #000, 0 0 80px #000;
 }
-
+.deleteBtn:hover {
+  color: #000;
+  background-color: #c00;
+  text-shadow: 0 0 20px #c00, 0 0 40px #c00, 0 0 50px #000, 0 0 80px #000;
+}
 .completed {
   margin: 0 6.5%;
   width: 80%;
@@ -237,6 +245,7 @@ li:hover {
   border-bottom: 1px solid #fa0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-
+  color: #0f4;
+  text-shadow: 0 0 20px #0f4, 0 0 40px #0f4, 0 0 50px #000, 0 0 80px #000;
   z-index: 1;
 }

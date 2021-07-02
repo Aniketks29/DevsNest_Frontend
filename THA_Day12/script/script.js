@@ -7,8 +7,7 @@ var completedTaskList = document.querySelector('.completed-tasks-list');
 var deleteBtn = document.querySelector('.deleteBtn');
 var done = document.querySelectorAll('.doneBtn');
 
-var isPending = false;
-var isCompleted = false;
+
 var todoLocal = { 
     item:localStorage.getItem('todoLocal'),
 };
@@ -43,11 +42,12 @@ submit.addEventListener('click', (event) => {
 })
 
 pendingTaskList.addEventListener('click', (event) => {
-    if (event.target.tagName == "LI") {
-        console.log(event.target.childNodes[1]);
-        let moveTask = `<li><div class="completed">${event.target.childNodes[1].innerHTML}</div><div class="deleteBtn"><i class="fa fa-trash-o" style="font-size:36px"></i></div></li>`;
+    console.log(event.target);
+    if (event.target.classList.contains('fa-check-circle-o')) {
+        console.log(event.target.parentElement.parentElement.childNodes[1]);
+        let moveTask = `<li><div class="completed">${event.target.parentElement.parentElement.childNodes[1].innerHTML}</div><div class="deleteBtn"><i class="fa fa-trash-o" style="font-size:36px"></i></div></li>`;
         completedTaskList.innerHTML += moveTask;
-        event.target.remove();
+        event.target.parentElement.parentElement.remove();
         localStorage.setItem('doneLocal', completedTaskList.innerHTML);
         // console.log(pendingTaskList);
         // console.log(completedTaskList);
@@ -55,8 +55,21 @@ pendingTaskList.addEventListener('click', (event) => {
         
     }
 
-    if (event.target.classList.contains('deleteBtn')) {
-        event.target.parentElement.remove();
+    if (event.target.classList.contains('fa-trash-o')) {
+        event.target.parentElement.parentElement.remove();
+        
+        console.log(pendingTaskList);
+        console.log(completedTaskList);
+        localStorage.setItem('doneLocal', completedTaskList.innerHTML);
+        
+        localStorage.setItem('todoLocal', pendingTaskList.innerHTML);
+    }
+})
+
+
+completedTaskList.addEventListener('click', (event) => {
+    if (event.target.classList.contains('fa-trash-o')) {
+        event.target.parentElement.parentElement.remove();
         
         console.log(pendingTaskList);
         console.log(completedTaskList);
