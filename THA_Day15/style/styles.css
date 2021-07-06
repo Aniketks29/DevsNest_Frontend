@@ -1,0 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  text-shadow: 0 0 7px #0af 0 0 12px #aaf 0 0 20px #afa;
+  position: relative;
+}
+
+.title {
+  font-size: 3rem;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 7px #0af 0 0 12px #aaf 0 0 30px #afa;
+}
